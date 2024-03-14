@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dotBoard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 text-white">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">dotBoard</h1>
+        <form id="GA4Form" class="mb-8">
+            <div class="mb-4">
+                <label for="propertyID" class="block text-sm font-medium">Cliente:</label>
+                <select id="propertyID" name="propertyID" class="mt-1 p-2 block text-black w-full border-gray-300 rounded-md" required>
+                    <option value="344874357">Fronteiras</option>
+                    <option value="OutroID1">Outro Cliente</option>
+                    <option value="OutroID2">Outro Cliente</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="dashboard" class="block text-sm font-medium">Dashboard:</label>
+                <select id="dashboard" name="dashboard" class="mt-1 p-2 block text-black w-full border-gray-300 rounded-md" required>
+                    <option value="344874357">GA4</option>
+                    <option value="OutroID1">Outro Dashboard</option>
+                    <option value="OutroID2">Outro Dashboard</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="startDate" class="block text-sm font-medium">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" class="mt-1 p-2 block w-full text-black border-gray-300 rounded-md" required>
+            </div>
+            
+            <div class="mb-4">
+                <label for="endDate" class="block text-sm font-medium">End Date:</label>
+                <input type="date" id="endDate" name="endDate" class="mt-1 p-2 block text-black w-full border-gray-300 rounded-md" required>
+            </div>
+            
+            <button type="submit" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded-md text-white font-bold">Get Data</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="fetch-data.js"></script>
+</body>
+</html>
